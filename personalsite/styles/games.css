@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:ital@1&display=swap');
+
+body {
+    background-color: red;
+}
+
+header{
+    background-color: rgba(57,180,147,.65);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    z-index: 1;
+}
+
+.logo {
+    height: 150px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 40px;
+}
+nav a{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px; 
+    text-decoration: solid;
+    color: aquamarine;
+}
+
+nav a:hover{
+    color: blue
+}
+
+#hero {
+    display: grid;
+    margin-top: -175px;
+}
+
+#hero-box{
+    z-index: -1;
+    display: grid;
+}
+
+#hero-img{
+    width: 100%;
+    display: grid;
+    grid-column-start: 1;
+}
+
+.home-title{
+    display: flex;
+    justify-content: center;
+    color: violet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 140px;
+    margin-top: -30%;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.home-grid section {
+    background-color: orangered; 
+    padding: 20px;
+    border-radius: 8px; 
+}
+
+
+.home-grid img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.home-grid h2{
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+.home-grid h3 {
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.home-grid a {
+    display: flex;
+    justify-content: center;
+    color: greenyellow; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.home-grid a:hover {
+    color: blue; 
+}
+
+h4 {
+    margin-top: -1.5%;
+    color: #111111;
+}
+
+footer {
+    background-color: sienna;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-family: Arial, sans-serif, 'Times New Roman';
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer .link {
+    margin-top: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+footer .link img {
+    width: 80px;
+}
+
+footer .link img:hover {
+    transform: scale(1.25);
+}
+
+footer a {
+    color: beige;
+}
+
