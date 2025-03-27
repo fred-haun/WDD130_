@@ -6,6 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="styles/home.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+     </script>
+     
 </head>
 <body>
     <div id="content">
@@ -19,13 +53,51 @@
                 <a href="tv.html">Movies & TV</a>
             </nav>
         </header>
-        <div id="hero">
-            <div id="hero-box">
-                <img id="hero-img" src="images/N64-Console-Set.png" alt="90's Cup">
+        <div class="container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                  <img src="images/SNES.png" style="width:50%">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                  <img src="images/GameCube.png" style="width:50%">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                  <img src="images/N64-Console-Set.png" style="width:50%">
+              </div>
+            
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                  <img src="images/Sega-Master-System.png" style="width:50%">
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="images/SNES.png" style="width:100%" onclick="currentSlide(1)" alt="Super Nintendo">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/GameCube.png" style="width:100%" onclick="currentSlide(2)" alt="Nintendo Gamecube">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/N64-Console-Set.png" style="width:100%" onclick="currentSlide(3)" alt="Nintendo64">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/Sega-Master-System.png" style="width:100%" onclick="currentSlide(4)" alt="Sega Master System">
+                </div>
             </div>
-            <section id="hero-msg">
-                <h1 class="home-title">Let's Visit the Past!</h1>
-            </section>
+            </div>
+            <div class="Message">
+                <section id="hero-msg">
+                    <h1 class="home-title">Let's Visit the Past!</h1>
+                </section>
+            </div>
             </div>
             <main class="home-grid">
                 <section class="Games">
